@@ -1,0 +1,291 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+
+
+main > .container {
+  padding: 60px 0px 0;
+}
+
+
+
+#nav{
+  background-color: #6D9886;
+  padding: 25px;
+}
+
+#head {
+  margin-bottom: 15px;
+}
+h1{
+  color: #F7F7F7;
+  font-family: 'Imbue', serif;
+  transition: color 0.3s ease, font-size 0.3s ease;}
+
+  h1:hover {
+    color: #FFF;
+    font-size: 1.8em;
+  }
+
+#titulospista{
+  background-color: #F7F7F7;
+  }
+
+  #fotologo {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  #fotologo:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  
+  
+.container{
+  padding-left: 0px; 
+  margin-left: 0px;
+  width: auto;
+  font-family: 'Poppins', sans-serif;
+
+}
+#btn-reproductor-replay {
+  transition: all 0.2s ease-in-out;
+}
+#btn-reproductor-replay.active {
+  transform: scale(1.2);
+}
+
+#repro {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #F7F7F7;
+  align-items:center ;
+
+}
+
+
+#reproductor {
+  background-color: #F7F7F7; 
+  padding: 20px;
+  margin-top: 20px;
+  width: 700px;
+  border: 1px solid black;
+  height: fit-content;
+
+ 
+}
+
+
+
+#player{
+  background-color: #F7F7F7;
+  height: 100%;
+}
+#audio-player {
+	width: 200px;
+	height: 50px;
+	background-color: #F7F7F7;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+}
+
+.playlist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.rowa{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  color: rgb(0, 0, 0);
+  margin:10px;
+  
+  
+  
+
+}
+
+li:hover {
+  transform: scale(1.05);
+  background-color: #6D9886;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#imgcancion {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+a {
+  display: block;
+  font-size: 1.5rem;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  margin: 10px 0;
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+
+
+#cancion{
+  font-size: 18px;
+}
+
+#autor{
+  font-size: 14px;
+}
+
+#duracion{
+  font-size: 11px;
+}
+
+#player {
+  text-align: center;
+  height: fit-content
+}
+
+.reproductor {
+  margin: 0 auto;
+  margin-left: 0; 
+  background-color: #F7F7F7;
+  width: 100%;
+  height: fit-content;
+ 
+}
+
+#btn-reproductor, #btn-reproductor-play {
+  margin-right: 25px;
+}
+
+#muteButton {
+  margin-left: 2%;
+}
+
+#contenedor1 {
+  width: 100%;
+}
+
+
+.info-cancion {
+  margin-top: 180px;
+  margin-left: 29%;
+  display: flex;
+  height: fit-content;
+}
+
+.progress-bar-container {
+  width: 40%;
+  height: 10px;
+  background-color: #bdbdbd;
+  margin-bottom: 20px;
+  margin-left: 28% ;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #6D9886;
+  width: 0%;
+  transition: width 0.1s ease-in-out;
+}
+
+.tiempo-reproduccion {
+  width: 35%;
+  margin-left: 31% ;
+  display: flex;
+  justify-content: space-between;
+}
+
+.audio-control {
+  width: 30%;
+  height: 2px;
+  margin-left: 33%;
+  margin-top: 15px;
+  padding: 0;
+  background-color: #6D9886;
+  -webkit-appearance: none;
+}
+
+.audio-control::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.audio-control .audio-control__slider {
+  width: 100%;
+  max-width: 200px;
+}
+
+.control-volumen {
+  display: flex;
+  margin-bottom: 20px;
+  margin-right: 4%;
+}
+
+#banner {
+  padding: 0;
+}
+
+#principal {
+  width: 100%;
+}
+
+
+
+canvas {
+  border: 1px solid #000;
+}
+
+
+#audio1 {
+  display: none;
+}
+
+#audio2 {
+  display: none;
+}
+
+#audio3 {
+  display: none;
+}
+
+#audio4 {
+  display: none;
+}
+
+.img-banner {
+  width: 100% ;
+}
