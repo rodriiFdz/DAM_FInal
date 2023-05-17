@@ -41,13 +41,15 @@
 
   <!-- Custom styles for this template -->
   <link href="sticky-footer-navbar.css" rel="stylesheet">
+  <link rel="stylesheet" href="/lesson1-6/dist/style.css">
 </head>
 
 <body class="d-flex flex-column">
+  
   <header id="head">
     <nav class="navbar navbar-expand-md fixed-top" id="nav">
       <div class="container-fluid">
-        <h1>Real Good Music</h1>
+        <h1 class="titulo1">Real Good Music</h1>
         <img src="logo.png" height="64px" id="fotologo" onclick="reproducirCancion('audio-player')">
       </div>
     </nav>
@@ -158,8 +160,9 @@
         </div>
 
 
-      <div class="container">
-        ER JUEGO EL CALAMA
+      <div class="container-fluid" id="contenedor-juego">
+        <button id="start-btn">Start</button>
+        <canvas id="canvas"></canvas>
       </div>
   </main>
 
@@ -170,8 +173,10 @@
   </footer>
 
 
-  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
   <script src="script.js"></script>
+  <script src="/lesson1-6/dist/scriptJuego.js"></script>
+
 
 
 

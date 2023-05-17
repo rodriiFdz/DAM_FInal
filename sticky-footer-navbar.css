@@ -18,12 +18,12 @@ main > .container {
 #head {
   margin-bottom: 15px;
 }
-h1{
+.titulo1{
   color: #F7F7F7;
   font-family: 'Imbue', serif;
   transition: color 0.3s ease, font-size 0.3s ease;}
 
-  h1:hover {
+  .titulo1:hover {
     color: #FFF;
     font-size: 1.8em;
   }
@@ -265,10 +265,6 @@ a:hover {
 
 
 
-canvas {
-  border: 1px solid #000;
-}
-
 
 #audio1 {
   display: none;
@@ -288,4 +284,10 @@ canvas {
 
 .img-banner {
   width: 100% ;
+}
+
+#contenedor-juego {
+
+  display: flex;
+  align-items: center;
 }
