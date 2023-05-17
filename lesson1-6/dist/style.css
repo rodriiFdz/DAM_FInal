@@ -52,3 +52,8 @@ h5 {
   color: #FFFFFF;
 }
 
+.personaje {
+  border: 1px solid orangered;
+  width: 100% ;
+}
+

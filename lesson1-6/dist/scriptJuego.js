@@ -1,5 +1,12 @@
 const startBtn = document.getElementById('start-btn');
 
+var song1 = new Audio('1song.mp3');
+var song2 = new Audio('2song.mp3');
+var song3 = new Audio('3song.mp3');
+var song4 = new Audio('4song.mp3');
+
+
+
 startBtn.addEventListener('click', function() {
   startBtn.style.display = 'none';
 });
@@ -48,7 +55,7 @@ for (var row = 0; row < 4; row++) {
       blockColor = "#ff7a33"; // naranja
       break;
     case 2:
-      blockColor = "#ffd433"; // amarillo
+      blockColor = "#ffd433"; // amarillo #ffd433
       break;
     case 3:
       blockColor = "#ecff33"; // verde
@@ -65,12 +72,20 @@ for (var row = 0; row < 4; row++) {
       width: 60,
       height: 30,
       borderRadius: 15, // radio de curvatura de 5 píxeles
-
       color: blockColor,
-      hits: Math.floor(Math.random() * 3) + 1 // entre 1 y 3 colisiones necesarias para ser destruido
+      hits: Math.floor(Math.random() * 3) + 1, // entre 1 y 3 colisiones necesarias para ser destruido
+      black: false
     };
+    
+    // Establece como dorados los bloques que deseas
+    if ((row == 0 && col == 5) || (row == 1 && col == 4) || (row == 2 && col == 6) || (row == 3 && col == 8)) {
+      block.color = '#000000';
+      block.black = true;
+    }
+  
     blocks.push(block);
   }
+  
 }
 
 var score = 0;
@@ -156,27 +171,47 @@ function moveAll() {
     score++;
   }
   
-  // Verificar colisiones con bloques
-  for (var i = 0; i < blocks.length; i++) {
-    var block = blocks[i];
-    if (!block.hit) {
-      if (ballX > block.x && ballX < block.x + block.width && ballY > block.y && ballY < block.y + block.height) {
-        
-      
-      
-         // drawRect(block.x, block.y, block.width, block.height, 'steelblue');
-        
-        ballStepY *= -1;
-        block.hit = true;
-        score += 50;
+// Declarar una variable para la canción actual
+var currentSong = null;
 
-        
-      }
-      else {
-       // drawRect(block.x, block.y, block.width, block.height, 'steelblue');
-      }
-    }
-  }
+// Verificar colisiones con bloques
+for (var i = 0; i < blocks.length; i++) {
+var block = blocks[i];
+if (!block.hit) {
+if (ballX > block.x && ballX < block.x + block.width && ballY > block.y && ballY < block.y + block.height) {
+if (block.color === '#000000') {
+block.hit = true;
+score += 50;
+// Detener la canción actual antes de reproducir una nueva
+if (currentSong) {
+currentSong.pause();
+}
+var newSong;
+switch (i % 4) {
+case 0:
+newSong = song1;
+break;
+case 1:
+newSong = song2;
+break;
+case 2:
+newSong = song3;
+break;
+case 3:
+newSong = song4;
+break;
+}
+currentSong = newSong;
+currentSong.currentTime = 0;
+currentSong.play();
+} else {
+ballStepY *= -1;
+block.hit = true;
+score += 50;
+}
+}
+}
+}
 
 }
 
@@ -211,7 +246,7 @@ function updateAll() {
 
 window.addEventListener('DOMContentLoaded', function () {
 
-  canvas = document.querySelector('#canvas');
+  canvas = document.querySelector('canvas');
   ctx = canvas.getContext('2d');
   if ( ctx ) {
 
